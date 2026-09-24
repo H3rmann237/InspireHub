@@ -86,10 +86,3 @@ backtotop.addEventListener("click", () => {
 /*⋆ Dé Bonus
 Ajoutez un événement input qui ltre vos questions FAQ en direct pendant que l'utilisateur tape dans un
 champ de recherche (les questions qui ne correspondent pas se cachent).*/
-
-const faqsearch = document.querySelector("#faq-search");
-const faqitem = document.querySelector("#faq-item");
-
-faqsearch.addEventListener("input", () => {
-  array.forEach((item) => {});
-});
