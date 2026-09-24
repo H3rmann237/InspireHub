@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <nav class="bg-slate-900 px-4 py-3 relative">
+      <div class="max-w-3xl mx-auto flex items-center justify-between">
+        <span class="font-bold text-pink-500">MonProjet</span>
+        <button id="menu-btn" class="sm:hidden text-slate-300 text-2xl">
+          &#9776;
+        </button>
+        <ul class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#live">Live</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden flex-col gap-3 px-4 pb-4 text-sm text-slate-300 sm:hidden"
+      >
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#live">Live</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 py-10 space-y-16">
+      <section id="faq">
+        <h2 class="text-2xl font-bold text-pink-500 mb-4">
+          Questions Fréquentes
+        </h2>
+        <div class="space-y-3" id="faq-list">
+          <input
+            id="faq-search"
+            type="text"
+            placeholder="Rechercher une question..."
+            class="w-full bg-slate-900 rounded-xl px-4 py-2 text-sm text-slate-100 mb-4"
+          />
+          <div class="faq-item bg-slate-900 rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left px-4 py-3 flex justify-between"
+            >
+              Votre première question ?
+              <span class="faq-icon text-pink-400">+</span>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-sm text-slate-400">
+              Votre réponse ici.
+            </div>
+          </div>
+          <div class="faq-item bg-slate-900 rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left px-4 py-3 flex justify-between"
+            >
+              Votre seconde question ?
+              <span class="faq-icon text-pink-400">+</span>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-sm text-slate-400">
+              Votre réponse ici.
+            </div>
+          </div>
+          <div class="faq-item bg-slate-900 rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left px-4 py-3 flex justify-between"
+            >
+              Votre troisième question ?
+              <span class="faq-icon text-pink-400">+</span>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-sm text-slate-400">
+              Votre réponse ici.
+            </div>
+          </div>
+          <!-- ajoutez 2 autres .faq-item avec la même structure -->
+        </div>
+      </section>
+
+      <section id="live" class="text-center">
+        <h2 class="text-2xl font-bold text-pink-500 mb-4">
+          Decouvrez l'offre du moments
+        </h2>
+        <button
+          id="fetch-btn"
+          class="bg-pink-600 text-white px-5 py-2 rounded-lg text-sm"
+        >
+          Decouvrir
+        </button>
+        <p id="fetch-box" class="mt-6 text-slate-300 italic"></p>
+      </section>
+
+      <section id="contact">
+        <h2 class="text-2xl font-bold text-pink-500 mb-4">Contact</h2>
+        <form id="contact-form" class="bg-slate-900 rounded-2xl p-6 flex gap-3">
+          <input
+            id="contact-email"
+            type="text"
+            required
+            placeholder="vous@exemple.com"
+            class="flex-1 bg-slate-800 rounded-lg px-3 py-2 text-sm"
+          />
+          <button
+            type="submit"
+            class="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm"
+          >
+            Envoyer
+          </button>
+        </form>
+        <p id="form-message" class="mt-3 text-sm"></p>
+      </section>
+    </main>
+
+    <button
+      id="back-to-top"
+      class="hidden fixed bottom-6 right-6 bg-pink-600 text-white w-11 h-11 rounded-full"
+    >
+      &#8593;
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
